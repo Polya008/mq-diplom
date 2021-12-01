@@ -424,7 +424,7 @@
 
 .search-button:hover,
 .mail-button:hover,
-.product-button:hover {
+.product-button:hover, .popup-end:hover {
   background-color: #323232;
 }
 
@@ -520,9 +520,10 @@
   width: 85%; /*300*/
   height: 263px; /*263*/
   align-items: flex-end;
+  flex-grow: 1;
   outline: 3px solid #b59f5b; 
-  outline-offset: 2rem; /*50*/ 
-  transform: scale(1);
+  outline-offset: 2rem; /*50*/
+  /*transform: scale(0.8);*/
 }
 
 .sale-description{
@@ -624,8 +625,9 @@
   font-weight: 700;
 }
 
-.popup-container {
-  display: none;
+.popup-container:before {
+  content: "";
+  /*display: none;*/
   background: #000000;
   height: 100%;
   opacity: 0.8;
@@ -636,7 +638,7 @@
   left: 0;
   font-family: "Open Sans";
   font-weight: 400;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .popup {
@@ -654,22 +656,32 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
 }
 
 
 .select-label, .mailing-label, .content-label {
   padding-bottom: 12px;
+  font-size: 12px;
 }
 
 .select {
-  -webkitappearance
-  -mozappearance
+  background-image: url(../svg/form-arrows.svg);
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 11px;
+  -webkit-appearance;
+  -moz-appearance;
 }
 
-.popup-radio-buttom {
+.popup-radio-buttom1 {
   background-size: 10px;
   background-repeat: no-repeat;
-  background-image: url(../svg/form-circle.svg);
+}
+
+.radio-field{
+  display: inline-block;
 }
 
 .textarea {
@@ -681,8 +693,13 @@
   color: #888888;
 }
 
+.textarea:focus, .select:focus {
+  outline: 2px solid #b59f5b;
+}
+
 .popup-end {
   width: 100%;
+  font-size: 14px;
 }
 
 @media (max-width: 640px) {
