@@ -627,7 +627,7 @@
 
 .popup-container::before {
   content: "";
-  /*display: none;*/
+  display: none;
   background: #000000;
   height: 100%;
   opacity: 0.8;
@@ -643,6 +643,7 @@
 
 .popup {
   background-color: #ffffff;
+  display: none;
   width: 390px;
   height: 590px;
   position: fixed;
