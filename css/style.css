@@ -522,8 +522,8 @@
   outline: 3px solid #b59f5b; 
   outline-offset: 30px;
   transform: translate(10px, -10px);
-
 }
+
 
 .sale-description{
   font-weight: 400;
@@ -627,7 +627,7 @@
 
 .popup-container::before {
   content: "";
-  display: none;
+  /*display: none;*/
   background: #000000;
   height: 100%;
   opacity: 0.8;
@@ -676,14 +676,14 @@
   -moz-appearance: none;
 }
 
-.radio {
+.popup-radio-buttom {
   position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.radio-field{
+.radio-field {
   display: inline-block;
   font-size: 12px;
 }
@@ -705,7 +705,7 @@
   margin-left: 10px;
 }
 
-.radio:checked ~ .radio-text::before {
+.popup-radio-buttom:checked ~ .radio-text::before {
   background-image: url(../svg/form-circle.svg);
 }
 
@@ -731,9 +731,8 @@
   width: 10px;
   height: 10px;
   font-size: 0;
-  position: absolute;
-  top: -20px;
-  right: 0;  
+  top: 20px;
+  left: 0; 
 }
 
 @media (max-width: 640px) {
