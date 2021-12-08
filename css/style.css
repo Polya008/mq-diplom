@@ -121,7 +121,7 @@
 .trend {
   display: flex;
   width: calc(25% - 3px);
-  max-height: 318px;/*min 318*/
+  height: 318px;
   align-items: flex-end;
   background-color: #000000;
   position: relative;
@@ -493,6 +493,9 @@
   display: flex;
   justify-content: space-between;
   padding-top: 27px; 
+  padding-right: 22px;
+  margin-left: 22px;
+  max-width: 1200px;
 }
 
 .sale-header {
@@ -583,6 +586,9 @@
   text-transform: uppercase;
   border: none;
 }
+.foto-post-of-sale{
+  width: 100%;
+}
 
 .footer {
   display: block;
@@ -595,9 +601,8 @@
 .artical-socials {
   background-color: #f4f7f6;
   padding: 30px;
- /*width: 100%;*/
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .socials {
@@ -633,12 +638,11 @@
 
 .popup-container::before {
   content: "";
- display: none;
-  background: #000000;
-  height: 100%;
-  opacity: 0.8;
+  display: none;
+  background: black rgba(0, 0, 0, 0.6);
+  height: 100vh;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   top: 0;
   left: 0;
@@ -649,7 +653,7 @@
 
 .popup {
   background-color: #ffffff;
- display: none;
+  display: none;
   width: 390px;
   position: fixed;
   top: 100px;
@@ -748,18 +752,23 @@
 
 @media (max-width: 640px) {
   .header {
+    display: flex;
+    flex-direction: column;
     background-image: url("../images/banner-mobile.jpg");
-    padding: 220px 0;
+    padding-top: 30px;
   }
 
   .header-logo {
-    margin: 0 auto;
+    padding-top: 167px;
+    padding-left: auto;
+    padding-right: auto;
     width: 17rem;
   }
 
   .welcome-title {
    line-height: 1.4;
    font-size: 1.6rem;
+   padding-top: 0;
 }
 
   .trend-artical {
@@ -769,6 +778,7 @@
 
   .trend {
     width: 100%;
+    margin-right: 0;
   }
 
   .trend:nth-child(-n + 3) {
@@ -786,6 +796,10 @@
  .post {
     flex-wrap: wrap;
   }
+
+.post:last-child {
+  margin-bottom: 40px;
+}
 
 .edition {
   margin-bottom: 25px;
@@ -807,7 +821,7 @@
     width: 100%;
   }
 
-  .sale:nth-last-child(n+2) {
+  .sale:nth-last-child {
     margin-bottom: 40px;
   }
 
@@ -868,7 +882,10 @@
 
   .aside {
     width: 35%; 
+    margin: 0;
  }
+}
+
 }
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation:portrait) {
@@ -918,6 +935,8 @@
  .menu-burger {
    width: 24px;
    height: 22px;
+   top: 0;
+   right: 0;
 }
 
 .menu-burger-item {
