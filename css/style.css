@@ -18,7 +18,7 @@
 
 .header {
   display: block;
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url("../images/banner-bg.jpg");
   max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -121,7 +121,7 @@
 .trend {
   display: flex;
   width: calc(25% - 3px);
-  height: 318px;
+  min-height: 318px;
   align-items: flex-end;
   background-color: #000000;
   position: relative;
@@ -472,7 +472,8 @@
 
 .topic-link:hover,
 .hashtag-link:hover,
-.title-of-trends:hover {
+.title-of-trends:hover, 
+.sale-description:hover {
   background-color: #000000;
   color: #ffffff;
 }
@@ -521,6 +522,7 @@
 
 .sale-link:hover {
   text-decoration: underline;
+  color: #4682B4;
 }
 
 .description {
@@ -586,6 +588,7 @@
   text-transform: uppercase;
   border: none;
 }
+
 .foto-post-of-sale{
   width: 100%;
 }
@@ -639,7 +642,7 @@
 .popup-container::before {
   content: "";
   display: none;
-  background: black rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   height: 100vh;
   position: fixed;
   width: 100vw;
@@ -697,8 +700,8 @@
 .radio-field {
   display: flex;
   font-size: 12px;
-  justify-content: space-between;
 }
+
 
 .radio-text::before {
   content: "";
@@ -714,7 +717,7 @@
 }
 
 .popup-radio-buttom:nth-child(n+2) {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .popup-radio-buttom:checked ~ .radio-text::before {
@@ -741,9 +744,9 @@
 }
 
 .popup_close {
-  width: 10px;
-  height: 10px;
-  font-size: 20px;
+  width: 5px;
+  height: 5px;
+  font-size: 5px;
   top: -20px;
   right: 0; 
   position: absolute;
@@ -760,14 +763,14 @@
 
   .header-logo {
     padding-top: 167px;
-    padding-left: auto;
-    padding-right: auto;
+    /*padding-left: auto;
+    padding-right: auto;*/
     width: 17rem;
   }
 
   .welcome-title {
    line-height: 1.4;
-   font-size: 1.6rem;
+   font-size: 2rem;
    padding-top: 0;
 }
 
@@ -789,7 +792,7 @@
     flex-wrap: wrap;
  }
 
- .main, .foto-post, .info {
+ .main, .foto-post, .info, .aside, .sale, .saling {
     width: 100%;
   }
 
@@ -797,8 +800,8 @@
     flex-wrap: wrap;
   }
 
-.post:last-child {
-  margin-bottom: 40px;
+ .post:last-child {
+    margin-bottom: 40px;
 }
 
 .edition {
@@ -809,22 +812,18 @@
    margin-left: 0;
 }
 
-  .aside {
-    width: 100%; 
- }
-
   .saling {
     flex-wrap: wrap;
   }
 
   .sale {
-    width: 100%;
-  }
-
-  .sale:nth-last-child {
     margin-bottom: 40px;
   }
 
+  .saling {
+  margin-left: 0px;
+  max-width: 360px;
+ }
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
@@ -847,7 +846,7 @@
     background-image: url("../images/banner-bg-tablet.jpg");
     max-width: 100%;
     max-height: 100%;
-}
+ }
 
   .welcome {
     width: 77%;
@@ -858,11 +857,15 @@
    font-size: 2.4rem;
    margin: 0 auto;
   }
+   
+   .trend-article {
+    min-height: 249px;
+   }
 
-  .trend-artical {
-    flex-wrap: wrap;
-  }
-    
+  .description-of-trend {
+   margin-bottom: 1em;
+   padding: 1.8em 1.5em;
+}
   .main {
     width: 60%;
   }
@@ -873,7 +876,7 @@
 
   .edition {
   margin-bottom: 20px;
-}
+ }
 
   .info {
     width: 45%;
@@ -886,14 +889,18 @@
  }
 }
 
-}
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation:portrait) {
-  .trend {
-    width: calc(50% - 3px);
+  .trend-artical {
+    flex-wrap: wrap;
   }
 
-  .trend:nth-child(-n+2) {
+  .trend {
+    width: calc(50% - 3px);
+    min-height: 249px;
+  }
+
+  .trend:nth-child(-n + 2) {
     margin-bottom: 3px;
   }
 
@@ -901,24 +908,30 @@
     margin-right: 3px;
   }
 
-  .post {
-    flex-wrap: wrap;
+  .main {
+    width: 58%;
   }
-  
+
+  .post {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .foto-post, .info {
     width: 100%;
+    margin-left: 0;
  } 
 
- .info {
-   margin-left: 0;
- }
+  .aside{
+    width: 35%;
+  }
 
   .saling {
     flex-wrap: wrap;
   }
 
   .sale {
-    width: 45%;
+    width: 48%;
  }
 
   .sale:nth-child(n+3) {
