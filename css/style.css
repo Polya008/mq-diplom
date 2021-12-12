@@ -641,7 +641,7 @@
 
 .popup-container::before {
   content: "";
-  display: none;
+  /*display: none;*/
   background: rgba(0, 0, 0, 0.6);
   height: 100vh;
   position: fixed;
@@ -656,11 +656,13 @@
 
 .popup {
   background-color: #ffffff;
-  display: none;
+  /*display: none;*/
   width: 390px;
   position: fixed;
+ /*align-items: center;
+  justify-content: center;*/
   top: 100px;
-  left: 40%;
+  left: 35%;
   padding: 55px 30px; 
   z-index: 1;
   font-family: "Open Sans";
@@ -743,13 +745,15 @@
   bottom: 0;
 }
 
-.popup_close {
-  width: 5px;
-  height: 5px;
-  font-size: 5px;
-  top: -20px;
-  right: 0; 
+.popup-close {
+  width: 15px;
+  height: 15px;
+  font-size: 0;
   position: absolute;
+  top: -30px;
+  right: 0;
+  background: none;
+  border: none;
 }
 
 
@@ -763,8 +767,8 @@
 
   .header-logo {
     padding-top: 167px;
-    /*padding-left: auto;
-    padding-right: auto;*/
+    padding-left: auto;
+    padding-right: auto;
     width: 17rem;
   }
 
@@ -788,16 +792,12 @@
     margin-bottom: 3px;
   }
 
-  .main-field {
+  .main-field,  .post,  .saling  {
     flex-wrap: wrap;
  }
 
  .main, .foto-post, .info, .aside, .sale, .saling {
     width: 100%;
-  }
-
- .post {
-    flex-wrap: wrap;
   }
 
  .post:last-child {
@@ -810,19 +810,24 @@
 
  .info {
    margin-left: 0;
-}
-
-  .saling {
-    flex-wrap: wrap;
-  }
+ }
 
   .sale {
     margin-bottom: 40px;
   }
 
   .saling {
-  margin-left: 0px;
-  max-width: 360px;
+   margin-left: 0px;
+   max-width: 360px;
+ }
+
+ .popup {
+    width: 90vw;
+    margin-top: 50px;
+
+   top: 20px;
+   left: 5%;
+   padding: 55px 30px; 
  }
 }
 
