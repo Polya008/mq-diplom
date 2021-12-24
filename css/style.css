@@ -534,16 +534,15 @@
 }
 
 .description {
-  width: 85%; /*300*/
+  width: 100%; /*300*/
   max-height: 263px; /*263*/
   align-items: flex-end;
   flex-grow: 1;
   outline: 3px solid #b59f5b; 
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  margin-top: -20px;
-  transform: translate(10px, -10px);
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 7%;
+  margin-top: -8%;
 }
 
 .sale-description{
@@ -897,46 +896,45 @@
     max-height: 100%;
  }
 
-  .welcome {
-    width: 77%;
+.welcome {
+   width: 77%;
   }
 
-  .welcome-title {
-   line-height: 1.4;
-   font-size: 2.4rem;
-   margin: 0 auto;
+ .welcome-title {
+  line-height: 1.4;
+  font-size: 2.4rem;
+  margin: 0 auto;
   }
    
-   .trend-article {
+.trend-article {
     min-height: 249px;
    }
 
-  .description-of-trend {
+.description-of-trend {
    margin-bottom: 1em;
    padding: 1.8em 1.5em;
 }
 
-  .main {
+.main {
     width: 60%;
   }
 
-.foto-post {
+/*.foto-post {
   width: 48%;
-}
-  .edition {
+}*/
+
+.edition {
   margin-bottom: 20px;
  }
 
-  .info {
-    width: 45%;
-    margin-left: 5%;
- } 
+.info {
+  width: 45%;
+  margin-left: 5%;
+ }
 
 .post {
-    width: 100%;
-    flex-direction: column;
-
-    
+  width: 100%; 
+  flex-direction: column; 
 }
 
  .post:after {
