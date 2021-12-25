@@ -889,7 +889,7 @@
 }
 
 
-@media (min-width: 641px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
   .header {
     background-image: url("../images/banner-bg-tablet.jpg");
     max-width: 100%;
@@ -910,6 +910,10 @@
     min-height: 249px;
    }
 
+.title-of-trends {
+  max-width: 170px ;
+}
+
 .description-of-trend {
    margin-bottom: 1em;
    padding: 1.8em 1.5em;
@@ -917,11 +921,8 @@
 
 .main {
     width: 60%;
+    flex-direction: column;
   }
-
-/*.foto-post {
-  width: 48%;
-}*/
 
 .edition {
   margin-bottom: 20px;
@@ -934,7 +935,7 @@
 
 .post {
   width: 100%; 
-  flex-direction: column; 
+  flex-wrap: wrap;
 }
 
  .post:after {
@@ -967,10 +968,6 @@
     margin-bottom: 3px;
   }
 
-  .trend:nth-child(odd) {
-    margin-right: 3px;
-  }
-
   .main {
     width: 58%;
   }
@@ -979,6 +976,15 @@
     flex-direction: column;
     width: 100%;
   }
+
+  .post:after {
+  content: "";
+  display: block;
+  width: 100%; 
+  height: 3px;
+  margin-top: 30px;
+  background-color: #e1d9bd;
+}
 
   .foto-post, .info {
     width: 100%;
