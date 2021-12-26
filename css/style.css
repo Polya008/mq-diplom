@@ -784,26 +784,28 @@
 
 @media (max-width: 640px) {
   .container {
-    margin:  0 auto;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
   }
 
   .header {
     display: flex;
     flex-direction: column;
     background-image: url("../images/banner-mobile.jpg");
-    padding-top: 30px;
   }
 
   .header-logo {
     padding-top: 167px;
     width: 17rem;
-    mmargin:  0 auto;
   }
 
   .welcome-title {
    line-height: 1.4;
    font-size: 2rem;
    padding-top: 0;
+
 }
 
   .trend-artical {
@@ -845,23 +847,23 @@
   margin-bottom: 25px;
 }
 
- .info {
+.info {
    margin-left: 0;
  }
 
-  .sale {
-    margin-bottom: 40px;
-  }
+.sale {
+  margin-bottom: 40px;
+}
 
-  .saling {
-   margin-left: 0px;
-   width: 360px;
+.saling {
+  margin-left: 0;
+  width: 100%; /*360px*/
  }
 
  .menu-burger {
    position: absolute;
    top: 30px;
-   right: 16px;
+   right: 10px;
 }
 
  .popup {
@@ -877,15 +879,16 @@
 @media (max-width: 640px) and (orientation: landscape) {
   .trend {
     width: calc(50% - 3px);
+    max-height: 230px;
   }
 
  .trend:nth-child(-n+2) {
     margin-bottom: 3px;
   }
 
-  .trend:nth-child(odd) {
-    margin-right: 3px;
-  }
+.title-of-trends {
+  max-width: 145px ;
+ }
 }
 
 
@@ -946,8 +949,7 @@
   margin-top: 30px;
   background-color: #e1d9bd;
 }
-
-  .aside {
+ .aside {
     width: 35%; 
     margin: 0;
  }
@@ -955,6 +957,7 @@
 
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation:portrait) {
+
   .trend-artical {
     flex-wrap: wrap;
   }
@@ -1018,7 +1021,7 @@
    width: 24px;
    height: 22px;
    top: 0;
-   right: 0;
+   /*right: 0;*/
 }
 
 .menu-burger-item {
