@@ -542,7 +542,7 @@
   padding-left: 7%;
   padding-right: 7%;
   padding-bottom: 7%;
-  margin-top: -8%;
+  margin-top: -30px;
 }
 
 .sale-description{
@@ -670,7 +670,7 @@
 
 .popup {
   background-color: #ffffff;
-  /*display: none;*/
+  display: none;
   max-width: 390px;
   position: relative;
   padding: 55px 30px; 
@@ -718,12 +718,17 @@
   color: #888888;
 }
 
+.popup-mailing {
+  display: flex;
+}
+
 .popup-radio-buttom {
   position: absolute;
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
 .popup-content {
   margin-top: 20px;
 }
@@ -785,8 +790,6 @@
 @media (max-width: 640px) {
   .container {
     padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
     position: relative;
   }
 
@@ -798,15 +801,19 @@
 
   .header-logo {
     padding-top: 167px;
-    width: 17rem;
+    width: 20rem;
+    text-align: center;
   }
 
-  .welcome-title {
-   line-height: 1.4;
-   font-size: 2rem;
-   padding-top: 0;
+ .welcome {
+   width: 95%;
+   margin-top: 40px;
+ }
 
-}
+  .welcome-title {
+   line-height: 1.6;
+   font-size: 2rem;
+  }
 
   .trend-artical {
     display: flex;
@@ -831,8 +838,8 @@
   }
 
  .post:last-child {
-    margin-bottom: 40px;
-}
+   margin-bottom: 40px;
+ }
 
  .post:after {
   content: "";
@@ -845,10 +852,10 @@
 
 .edition {
   margin-bottom: 25px;
-}
+ }
 
 .info {
-   margin-left: 0;
+  margin-left: 0;
  }
 
 .sale {
@@ -860,18 +867,16 @@
   width: 100%; /*360px*/
  }
 
- .menu-burger {
-   position: absolute;
-   top: 30px;
-   right: 10px;
+.menu-burger {
+  position: absolute;
+  top: 30px;
+  right: 10px;
 }
 
  .popup {
    width: 90vw;
    margin-top: 10px;
    margin-bottom: 10px;
-   min-height: 90vh;
-   left: 5%;
    padding: 55px 30px; 
  }
 }
@@ -886,9 +891,9 @@
     margin-bottom: 3px;
   }
 
-.title-of-trends {
-  max-width: 145px ;
- }
+ .title-of-trends {
+   max-width: 145px ;
+  }
 }
 
 
@@ -1021,7 +1026,6 @@
    width: 24px;
    height: 22px;
    top: 0;
-   /*right: 0;*/
 }
 
 .menu-burger-item {
