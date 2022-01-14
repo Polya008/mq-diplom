@@ -791,6 +791,7 @@
   .container {
     padding-top: 30px;
     position: relative;
+    justify-content: center;
   }
 
   .header {
